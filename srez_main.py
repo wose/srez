@@ -131,8 +131,11 @@ def _demo():
     saver.restore(sess, filename)
 
     # Execute demo
-    srez_demo.demo1(sess)
-
+    # srez_demo.demo1(sess)
+    train_data = TrainData(locals())
+#    srez_train.train_model(train_data)
+    srez_demo.demo2(train_data)
+    
 class TrainData(object):
     def __init__(self, dictionary):
         self.__dict__.update(dictionary)
